@@ -8,4 +8,16 @@
   margin-left: 80px;
   margin-bottom: 10px;
 }
+#facebooklogo{
+  margin-top: 80px;
+}
+}
+@media (max-width: 768px) {
+.section-title p {
+  margin: 10px;
+  margin-bottom: 30px;
+}
+#facebooklogo{
+  margin-top: 30px;
+}
 }

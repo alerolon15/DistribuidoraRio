@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myapp">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,9 +16,11 @@
 		<link href="css/owl.carousel.css" rel="stylesheet">
 		<link href="css/owl.theme.default.min.css"  rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
-				<link href="css/style1.css" rel="stylesheet">
+		<link href="css/style1.css" rel="stylesheet">
+ 		<!-- Angularjs -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 	</head>
-	<body id="page-top">
+	<body id="page-top" ng-controller="ctrlParent">
 		<!-- Navigation -->
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container">
@@ -35,11 +37,17 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="hidden">
-							<a href="#page-top"></a>
+						<li>
+							<a class="page-scroll" href="#page-top">Home</a>
 						</li>
 						<li>
 							<a class="page-scroll" href="#portfolio">Empresas</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#promos">Promos</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#links">Links</a>
 						</li>
 						<li>
 							<a class="page-scroll" href="#contact">Faça seu pedido</a>
@@ -51,20 +59,18 @@
 			<!-- /.container-fluid -->
 		</nav>
 		<!-- Header -->
-		<header>
+		<header id="Header">
 			<div class="container">
 				<div class="slider-container">
 					<div class="intro-text">
 						<div class="intro-lead-in saludo"><strong>LOJA VIRTUAL!</strong></div>
 						<div class="intro-lead-in" style="margin-top:100px;">
 							<p style="color: #000;"><strong>
-										Distribuidora Rio é uma empresa de vendas on-line , dedicada ao atendimento das necessidades
-										dos músicos, percussionistas, blocos é escolas de samba; com o mais alto nível de demanda.
-										Buscamos satisfazer as suas necessidades brindadole as melhores marcas ao melhor preço.
-										Compre rapido, seguro e confiable. Nossa sede central está localizada no coração do Rio de
-										Janeiro (na zona norte), fornecendo para todo o Brasil; é do Brasil para o mundo.
-										Nossos vendedores são altamente treinados para prestar um excelente serviço de qualidade.
-										Congratulamo-nos com o seu concto ...
+								Distribuidora Rio é uma empresa de vendas on-line, dedicada ao atendimento das necessidades dos músicos, percussionistas, blocos e escolas de samba; com o mais alto nível de demanda.
+								Buscamos satisfazer as suas necessidades dando as melhores marcas ao melhor preço.
+								Compre rapido, seguro e confiavel.
+								Nossa sede central está localizada no coração do Rio de Janeiro (na zona norte), fornecendo para todo o Brasil; é do Brasil para o mundo.
+								Nossos vendedores são altamente treinados para prestar um excelente serviço de qualidade. Aguardamos o seu concto ...
 							</strong></p>
 						</div>
 					</div>
@@ -87,7 +93,7 @@
 				<div class="col-md-5 col-md-offset-1 col-0-gutter">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="img\GOPE\GOPE_LOGO1.jpg" alt="img02" class="img-responsive" />
+							<img src="img\GOPE\GOPE_LOGO1.jpg" alt="img02" class="img-responsive" style="height:300px"/>
 							<figcaption>
 								<h2>Gope</h2>
 								<p>Instrumentos Musicais</p>
@@ -101,7 +107,7 @@
 				<div class="col-md-5 col-0-gutter">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="img\ROZINI\Rozini1.jpg" alt="img02" class="img-responsive" />
+							<img src="img\ROZINI\Rozini1.jpg" alt="img02" class="img-responsive" style="height:300px"/>
 							<figcaption>
 								<h2>Rozini</h2>
 								<p>Instrumentos musicais</p>
@@ -110,73 +116,97 @@
 						</figure>
 					</div>
 				</div>
-				<!-- end portfolio item -->
-				<!-- start portfolio item
-				<div class="col-md-4 col-0-gutter">
+				<!-- start portfolio item -->
+				<div class="col-md-5 col-md-offset-1 col-0-gutter">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="img\TIMBRA\timbra logo ok.jpg" alt="img02" class="img-responsive" />
+							<img src="img\CONTEMPORANEA\Logo1.jpg" alt="img02" class="img-responsive" style="height:300px" />
 							<figcaption>
-								<h2>Timbra</h2>
-								<p>Instrumentos Musicales</p>
+								<h2>Contemporanea</h2>
+								<p>Instrumentos Musicais</p>
 								<a href="#" data-toggle="modal" data-target="#Modal-3">Leer más</a>
 							</figcaption>
 						</figure>
 					</div>
 				</div>
-			-->
 				<!-- end portfolio item -->
-				<!-- Temporal
-				<div class="row">
-
-				<div class="col-md-4 col-0-gutter">
+				<!-- start portfolio item -->
+				<div class="col-md-5 col-0-gutter">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="img\King\logo.jpg" alt="img02" class="img-responsive" />
+							<img src="img\King\logo.jpg" alt="img02" class="img-responsive"  style="height:300px"/>
 							<figcaption>
-								<h2>King</h2>
-								<p>Instrumentos musicales</p>
+								<h2>KING</h2>
+								<p>Instrumentos musicais</p>
 								<a href="#" data-toggle="modal" data-target="#Modal-4">Leer más</a>
 							</figcaption>
 						</figure>
 					</div>
 				</div>
-			</div>
-			-->
-		  <!-- Temporal -->
-			<!-- </div>
-			<div class="row row-0-gutter">
-				<!-- start portfolio item
-
-				<div class="col-md-4 col-0-gutter">
+				<!-- end portfolio item -->
+				<div class="col-md-5 col-md-offset-1 col-0-gutter">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="images/demo/portfolio-5.jpg" alt="img02" class="img-responsive" />
+							<img src="img\TIMBRA\timbra logo ok.jpg" alt="img02" class="img-responsive"  style="height:300px"/>
 							<figcaption>
-								<h2>titulo 5</h2>
-								<p>tipo, area</p>
+								<h2>Timbra</h2>
+								<p>Instrumentos musicais</p>
 								<a href="#" data-toggle="modal" data-target="#Modal-5">Leer más</a>
 							</figcaption>
 						</figure>
 					</div>
 				</div>
-
-				<div class="col-md-4 col-0-gutter">
-					<div class="ot-portfolio-item">
-						<figure class="effect-bubba">
-							<img src="images/demo/portfolio-6.jpg" alt="img02" class="img-responsive" />
-							<figcaption>
-								<h2>titulo 5</h2>
-								<p>tipo, area</p>
-								<a href="#" data-toggle="modal" data-target="#Modal-2">Leer más</a>
-							</figcaption>
-						</figure>
-					</div>
-				</div>
-				 end portfolio item -->
+				<!-- end portfolio item -->
 			</div>
 			</div><!-- end container -->
 		</section>
+
+		<section id="promos" class="dark-bg">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<div class="section-title">
+							<h2>Promos</h2>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6 col-md-3" ng-repeat="i in getNumber(PROMOS) track by $index" >
+						<img class="img-responsive img-rounded" src="img\Promos\PROMOS ({{$index+1}}).jpg" alt="" style="width:100%; margin:10px;"/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+				<!-- Clients Aside -->
+		<aside class="clients" id="links">
+				<div class="container">
+						<div class="row">
+								<div class="col-xs-6 col-md-3 col-sm-3">
+										<a href="http://www.mercadolibre.com.ar/" rel='nofollow' target="_blank">
+												<img src="img/logos/mercado_livre.png" class="img-responsive img-centered" alt="mercado livre" title="mercadolivre">
+										</a>
+								</div>
+								<div class="col-xs-6 col-md-3 col-sm-3">
+									<a href="https://www.facebook.com/" rel='nofollow' target="_blank">
+										<img src="img/logos/WhatsApp.png"  class="img-responsive img-centered" alt="WhatsApp" title="WhatsApp">
+									</a>
+								</div>
+								<div class="col-xs-6 col-md-3 col-sm-3">
+										<a href="http://www.facebook.com/" rel='nofollow' target="_blank">
+												<img src="img/logos/facebook.png" id="facebooklogo" class="img-responsive img-centered" alt="Facebook" title="Facebook"">
+										</a>
+								</div>
+								<div class="col-xs-6 col-md-3 col-sm-3">
+										<a href="http://www.olx.com.ar/" rel='nofollow' target="_blank">
+												<img src="img/logos/OLX.png" class="img-responsive img-centered" alt="OLX" title="OLX">
+										</a>
+								</div>
+						</div>
+				</div>
+		</aside>
+
+		<!-- Contact Section -->
 
 		<section id="contact" class="dark-bg">
 			<div class="container">
@@ -262,8 +292,8 @@
 						<h4 class="modal-title" id="Modal-label-1">Gope</h4>
 					</div>
 					<div class="modal-body">
-						<img src="img\GOPE\GOPE_LOGO.jpg" alt="img01" class="img-responsive" />
-						<a href="Files\TABELA GOPE 2016-2.pdf"><button type="button" class="btn btn-default center">Olhar para os nossos produtos</button></a>
+						<img ng-repeat="i in getNumber(GOPE) track by $index" src="img\GOPE\GOPE ({{$index+1}}).jpg" alt="" style="width: 33%"/>
+						<hr>
 						<a href="Files\TABELA GOPE 2016-2.pdf"><button type="button" class="btn btn-default center">Catálogo de download</button></a>
 					</div>
 					<div class="modal-footer">
@@ -283,7 +313,6 @@
 					</div>
 					<div class="modal-body">
 						<img src="img\ROZINI\Rozini1.jpg" alt="img01" class="img-responsive" />
-						<a href="Files\TABELA ROZINI BR 2016.pdf"><button type="button" class="btn btn-default center">Olhar para os nossos produtos</button></a>
 						<a href="Files\TABELA ROZINI BR 2016.pdf"><button type="button" class="btn btn-default center">Catálogo de download</button></a>
 					</div>
 					<div class="modal-footer">
@@ -299,12 +328,12 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="Modal-label-3">Lamp & Velvet</h4>
+						<h4 class="modal-title" id="Modal-label-1">Contemporanea</h4>
 					</div>
 					<div class="modal-body">
-						<img src="images/demo/portfolio-3.jpg" alt="img01" class="img-responsive" />
-						<div class="modal-works"><span>Branding</span><span>Web Design</span></div>
-						<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe</p>
+						<img ng-repeat="i in getNumber(CONTE) track by $index" src="img\CONTEMPORANEA\CONTE ({{$index+1}}).jpg" alt="" style="width: 33%"/>
+						<hr>
+						<a href="Files\TABELA GOPE 2016-2.pdf"><button type="button" class="btn btn-default center">Catálogo de download</button></a>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -319,12 +348,12 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="Modal-label-4">Smart Name</h4>
+						<h4 class="modal-title" id="Modal-label-1">King</h4>
 					</div>
 					<div class="modal-body">
-						<img src="images/demo/portfolio-4.jpg" alt="img01" class="img-responsive" />
-						<div class="modal-works"><span>Branding</span><span>Web Design</span></div>
-						<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe</p>
+						<img ng-repeat="i in getNumber(KING) track by $index" src="img\KING\KING ({{$index+1}}).jpg" alt="" style="width: 33%"/>
+						<hr>
+						<a href="Files\TABELA GOPE 2016-2.pdf"><button type="button" class="btn btn-default center">Catálogo de download</button></a>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -339,12 +368,12 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="Modal-label-5">Fast People</h4>
+						<h4 class="modal-title" id="Modal-label-1">Timbra</h4>
 					</div>
 					<div class="modal-body">
-						<img src="images/demo/portfolio-5.jpg" alt="img01" class="img-responsive" />
-						<div class="modal-works"><span>Branding</span><span>Web Design</span></div>
-						<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe</p>
+						<img ng-repeat="i in getNumber(TIMBRA) track by $index" src="img\TIMBRA\TIMBRA ({{$index+1}}).jpg" alt="" style="width: 33%"/>
+						<hr>
+						<a href="Files\TABELA GOPE 2016-2.pdf"><button type="button" class="btn btn-default center">Catálogo de download</button></a>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -364,5 +393,19 @@
 		<script src="js/jquery.appear.js"></script>
 		<script src="js/SmoothScroll.min.js"></script>
 		<script src="js/mooz.themes.scripts.js"></script>
+		<script>
+			var app = angular.module('myapp',[]);
+			app.controller('ctrlParent',function($scope){
+				$scope.GOPE = 106;
+				$scope.ROZZINI = 6;
+				$scope.CONTE = 80;
+				$scope.KING = 21;
+				$scope.TIMBRA = 32;
+				$scope.PROMOS = 14;
+				$scope.getNumber = function(num) {
+						return new Array(num);
+				}
+			});
+		</script>
 	</body>
 </html>
