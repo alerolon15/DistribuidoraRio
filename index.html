@@ -194,7 +194,7 @@
 								</div>
 								<div class="col-xs-6 col-md-3 col-sm-3">
 										<a href="http://www.facebook.com/" rel='nofollow' target="_blank">
-												<img src="img/logos/facebook.png" id="facebooklogo" class="img-responsive img-centered" alt="Facebook" title="Facebook"">
+												<img src="img/logos/facebook.png" id="facebooklogo" class="img-responsive img-centered" alt="Facebook" title="Facebook">
 										</a>
 								</div>
 								<div class="col-xs-6 col-md-3 col-sm-3">
@@ -310,7 +310,8 @@
 						<h4 class="modal-title" id="Modal-label-2">ROZINI</h4>
 					</div>
 					<div class="modal-body">
-						<img src="img\ROZINI\Rozini1.jpg" alt="img01" class="img-responsive" />
+						<img ng-repeat="i in getNumber(ROZINI) track by $index" src="img\ROZINI\CATALOGO\CATALOG ({{$index+1}}).jpg" alt="" style="width: 33%"/>
+						<hr>
 						<a href="Files\TABELA ROZINI BR 2016.pdf"><button type="button" class="btn btn-default center">Catálogo de download</button></a>
 					</div>
 					<div class="modal-footer">
@@ -395,7 +396,7 @@
 			var app = angular.module('myapp',[]);
 			app.controller('ctrlParent',function($scope){
 				$scope.GOPE = 106;
-				$scope.ROZZINI = 6;
+				$scope.ROZINI = 6;
 				$scope.CONTE = 80;
 				$scope.KING = 21;
 				$scope.TIMBRA = 32;
