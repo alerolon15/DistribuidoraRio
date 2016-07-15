@@ -205,7 +205,6 @@ section ul li:before {
 	}
 	.navbar-default.navbar-shrink .navbar-brand {
 		font-size: 1.5em;
-		margin-top: 10px;
 	}
 }
 
@@ -224,8 +223,14 @@ header {
 	-o-background-size: cover;
 	text-align: center;
 	color: #fff;
+	height: 60vh;
 }
-
+@media (max-width: 768px) {
+	header {
+		background-image: url(../images/demo/sm-sanza.jpg);
+		height: 60vh;
+    }
+}
 header .intro-text {
 	padding-top: 100px;
 	padding-bottom: 0px;
