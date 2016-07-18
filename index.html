@@ -156,6 +156,19 @@
 					</div>
 				</div>
 				<!-- end portfolio item -->
+				<div class="col-md-5 col-0-gutter">
+					<div class="ot-portfolio-item">
+						<figure class="effect-bubba">
+							<img src="img\IVSON\logo.jpg" alt="img02" class="img-responsive"  style="height:300px"/>
+							<figcaption>
+								<h2>Ivson</h2>
+								<p>Instrumentos musicais</p>
+								<a href="#" data-toggle="modal" data-target="#Modal-6">Leer más</a>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- end portfolio item -->
 			</div>
 			</div><!-- end container -->
 		</section>
@@ -287,7 +300,7 @@
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 						<h4 class="modal-title" id="Modal-label-1">Gope</h4>
-						<a href="Files\TABELA GOPE 2016-2.pdf" style="float:left"><button type="button" class="btn btn-default center">baixar lista de preços</button></a>
+						<a href="Files\TABELA GOPE 2016-2017.pdf" style="float:left"><button type="button" class="btn btn-default center">baixar lista de preços</button></a>
 						<hr>
 						<hr>
 					</div>
@@ -309,16 +322,16 @@
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 						<h4 class="modal-title" id="Modal-label-2">ROZINI</h4>
-						<a href="Files\TABELA ROZINI BR 2016.pdf" style="float:left"><button type="button" class="btn btn-default center">baixar lista de preços</button></a>
+						<a href="Files\TABELA ROZINI 2016-2017.pdf" style="float:left"><button type="button" class="btn btn-default center">baixar lista de preços</button></a>
 						<hr>
 						<hr>
 					</div>
 					<div class="modal-body">
-						<img ng-repeat="i in getNumber(ROZINI) track by $index" src="img\ROZINI\CATALOGO\CATALOG ({{$index+1}}).jpg" alt="" style="width: 33%"/>
+						<img ng-repeat="i in getNumber(ROZINI) track by $index" src="img\ROZINI\ROZINI ({{$index+1}}).jpg" alt="" style="width: 33%"/>
 						<hr>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">CERRAR</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">FECHAR</button>
 					</div>
 				</div>
 			</div>
@@ -340,7 +353,7 @@
 						<hr>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">FECHAR</button>
 					</div>
 				</div>
 			</div>
@@ -362,7 +375,7 @@
 						<hr>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">FECHAR</button>
 					</div>
 				</div>
 			</div>
@@ -384,7 +397,29 @@
 						<hr>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">FECHAR</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal for portfolio item 5 -->
+		<div class="modal fade" id="Modal-6" tabindex="-1" role="dialog" aria-labelledby="Modal-label-6">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="Modal-label-1">Ivson</h4>
+						<a href="" style="float:left"><button type="button" onclick="alert('Ainda não há lista de preços')" class="btn btn-default center">baixar lista de preços</button></a>
+						<hr>
+						<hr>
+					</div>
+					<div class="modal-body">
+						<img ng-repeat="i in getNumber(IVSON) track by $index" src="img\IVSON\IVSON ({{$index+1}}).jpg" alt="" style="width: 33%"/>
+						<hr>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">FECHAR</button>
 					</div>
 				</div>
 			</div>
@@ -405,10 +440,11 @@
 			var app = angular.module('myapp',[]);
 			app.controller('ctrlParent',function($scope){
 				$scope.GOPE = 106;
-				$scope.ROZINI = 6;
+				$scope.ROZINI = 78;
 				$scope.CONTE = 80;
 				$scope.KING = 21;
 				$scope.TIMBRA = 32;
+				$scope.IVSON = 20;
 				$scope.PROMOS = 24;
 				$scope.getNumber = function(num) {
 						return new Array(num);
